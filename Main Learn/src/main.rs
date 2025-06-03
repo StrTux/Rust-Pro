@@ -1,10 +1,8 @@
-fn main () {
-    let num1: u8 = 5;
-    let num2: u8 = 80;
-    let sum = add(num1, num2); //  add si the function  call  here  
-    println!("The sum is: {}", sum);
-}
+fn main() {
+    let arr = [1, 2, 3, 4, 5];
+    
 
-fn add(num1: u8, num2:u8) -> u8 {
-    num1 + num2
+    for x in arr.iter() {
+        println!("for the value of x value: {}", x);
+    }
 }
