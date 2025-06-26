@@ -1,23 +1,26 @@
-use std::env;
-
-fn main() {
-    let args: Vec<String> = env::args().collect();
-
-    if args.len() != 3 {
-        println!("Usage: grep-lite <query> <filename>");
-        return;
-    }
-
-    let (query, filename) = parse_config(&args);
-
-    // --snip--
-
+struct React {
+    width: u32,
+    height: u32,
 }
 
-fn parse_config(args: &[String]) -> (&str, &str) {
+impl React {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
 
-    let query = &args[1];
-    let filename = &args[2];
 
-    (query, filename)
+    fn print_something(&self) {
+        println!("This is a React struct");
+    }
+}
+
+
+fn main() {
+    let r = React {
+        width: 30,
+        height: 50,
+    };
+
+    println!("Area: {}", r.area());
+    r.print_something();
 }
