@@ -6,3 +6,5 @@ edition = "2024"
 [dependencies]
 crossterm = "0.26"
 rand = "0.8"
+crypto = "0.5.1"
+sha2 = "0.10"
