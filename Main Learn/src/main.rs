@@ -20,3 +20,19 @@ fn do_some(s2 : &String) {
 // }
 
 //  this is the also  working phase 
+
+
+// 3. using the mutable refrense
+
+
+// fn main() {
+//     let mut s1 = String::from("ashish"); //  using &borrowing  function with mut  to  add or pussh somthing 
+
+//     do_some(&mut s1);
+//     println!("this is the s1 {}",s1);
+// }
+
+// fn do_some(s2 : &mut String) {
+//     s2.push_str(" tiwari");
+//     println!("this is the s2 = 2 {}",s2)
+// }
