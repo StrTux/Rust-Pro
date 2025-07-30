@@ -1,38 +1,22 @@
+use std::collections::HashMap;
+
+
 fn main() {
-    let s1 = String::from("ashish");
+    let mut names: HashMap<&str , i32> = HashMap::new();
 
-    do_some(&s1);
-    println!("this is the s1 {}",s1);
+    names.insert("ashish", 420);
+    names.insert("nikki", 360);
+    names.insert("soni", 350);
+    
+    println!("this all the names inside this {:?}", names);
+
+    match names.get("ashish")  {
+        Some(name)=> println!("this is the names of {:?}", name),
+        None => println!("there is no  data name nikki")
+    }
+
+    for (subject, name) in &names {
+        println!("for {} you  got names {}", subject, name);
+    }
+    println!("for the  finding is avaible or not in the names : {:?}", names.contains_key("Sushila"))
 }
-
-fn do_some(s2 : &String) {
-    println!("this is the s2 = 2 {}",s2)
-}
-
-//  what  we can  do  other thing is 
-
-// fn main() {
-//     let s1 = String::from("ashish");
-//     let s2 = &s1; //  which  will  borrow from this
-
-//     println!("this is the s1 {}",s1);
-//     println!("this is the s2 {}",s2);
-// }
-
-//  this is the also  working phase 
-
-
-// 3. using the mutable refrense
-
-
-// fn main() {
-//     let mut s1 = String::from("ashish"); //  using &borrowing  function with mut  to  add or pussh somthing 
-
-//     do_some(&mut s1);
-//     println!("this is the s1 {}",s1);
-// }
-
-// fn do_some(s2 : &mut String) {
-//     s2.push_str(" tiwari");
-//     println!("this is the s2 = 2 {}",s2)
-// }
